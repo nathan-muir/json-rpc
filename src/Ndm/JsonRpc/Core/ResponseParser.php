@@ -47,7 +47,7 @@ class ResponseParser
             throw new Exception\InvalidResponseException("The response did not specify attribute 'result'");
         }
         if (!property_exists($response, 'error')) {
-            throw new Exception\InvalidResponseException("The response did not specify attribute 'method'");
+            throw new Exception\InvalidResponseException("The response did not specify attribute 'error'");
         }
         // detect whether response is a result or an error
         $hasResult = isset($response->result);
